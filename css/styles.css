@@ -656,7 +656,94 @@ img {
 .socials-footer-link:focus {
   background-color: #31d0aa;
 }
+/* FOOTER F O R M  */
+.footer-subscribe {
+  display: flex;
+  align-items: flex-end;
+  width: 453px;
+  height: 80px;
+  margin-left: 80px;
+}
 
+.footer-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  user-select: none;
+  color: #ffffff;
+}
+.footer-mail-field {
+  padding: 8px 16px;
+  margin-right: 24px;
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: #ffffff;
+}
+.footer-mail-field::placeholder {
+  color: #ffffff;
+}
+.footer-mail-field:focus {
+  border-color: #31d0aa;
+
+  outline: none;
+}
+
+.button_wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 165px;
+  height: 40px;
+}
+
+.button_subscribe {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 100%;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+  background: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+
+  padding: 8px 64px 8px 24px;
+}
+.button_subscribe:focus {
+  outline: 2px solid #31d0aa;
+}
+.button_subscribe:hover {
+  background-color: #31d0aa;
+}
+.footer-btn-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  margin-left: 16px;
+
+  fill: #ffffff;
+}
 /* M o d a l    w i n d o w */
 
 .backdrop {
@@ -675,13 +762,15 @@ img {
   visibility: hidden;
   pointer-events: none;
 }
+
 .modal {
   position: absolute;
   top: calc(50%);
   left: calc(50%);
   transform: translate(-50%, -50%) scale(1);
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 72px 24px 24px 24px;
 
   width: 408px;
   min-height: 576px;
@@ -723,4 +812,139 @@ img {
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: currentColor;
+}
+
+.modal-title {
+  display: block;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #2e2f42;
+}
+.form-label {
+  user-select: none;
+
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: #8e8f99;
+}
+
+.form-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.form-field {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding-left: 38px;
+  width: 100%;
+  height: 40px;
+
+  outline: transparent;
+  outline-offset: -1px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+.form-field:focus {
+  outline: 1px solid#4d5ae5;
+}
+.form-field:focus + .modal-field-icon {
+  fill: #4d5ae5;
+}
+.modal-field-icon {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  fill: #2e2f42;
+}
+.modal-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.form-comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+  border-radius: 4px;
+  outline: transparent;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.unchecked {
+  opacity: 1;
+}
+.checked {
+  opacity: 0;
+}
+
+.form-check-input:checked + .form-gareement > .form-custom-check > .unchecked {
+  opacity: 0;
+}
+.form-check-input:checked + .form-gareement > .form-custom-check > .checked {
+  opacity: 1;
+}
+
+.form-check-input {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  transform: translateY(100%);
+  appearance: none;
+}
+.text-agreement {
+  user-select: none;
+
+  margin-left: 8px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: #8e8f99;
+}
+.agreement-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: #4d5ae5;
+}
+.form-gareement {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.form-btn {
+  margin-top: 24px;
+}
+
+.form-custom-check {
+  cursor: pointer;
+}
+.agreement-link {
+  color: #4d5ae5;
 }
